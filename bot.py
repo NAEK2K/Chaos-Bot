@@ -54,7 +54,7 @@ async def play_roulette(ctx, arg):
     if len(arg) > 1:
         player_choice = " ".join(arg[1:]).lower()
         number_regex = re.compile(r"(\d+)").findall(player_choice)
-        color_regex = re.compile(r"(black|red)").findall(player_choice)
+        color_regex = re.compile(r"(black|red|green)").findall(player_choice)
         player_outcome = "won"
         if color_regex:
             player_color = color_regex.pop()
